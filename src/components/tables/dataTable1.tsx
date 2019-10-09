@@ -11,7 +11,7 @@ export default class DataTable1 extends React.Component<any, any> {
         
         this.state = {
             data: errorData,
-            sort : {column: null, order: 1}
+            sort : {column: null, order: -1}
         }
     }
 
