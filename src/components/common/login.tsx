@@ -14,6 +14,19 @@ export default class Login extends React.Component<any, any> {
         }
     }
 
+    validationSchema = {
+        username: {
+            required: true,
+            minLength: 4,
+            maxLength: 20
+        },
+        password: {
+            required: true,
+            pattern: /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/
+        }
+
+    }
+
     handleChange = (e) => {
         const {name, value} = e.target
         const {errors}= this.state;
@@ -26,6 +39,7 @@ export default class Login extends React.Component<any, any> {
         else if(validationDetails.isValid && errors){
             errors[name] = null
         }
+    
         
         this.setState({
             [name]: value,
@@ -37,13 +51,19 @@ export default class Login extends React.Component<any, any> {
     validateField = (field:string, value:any)=>{
         let isValid = true;
         let message:any = null;
-        if(!value) {
+        const validationRules = this.validationSchema[field]; 
+        if(validationRules.required && !value) {
             isValid = false;
             message = `${field} is required`
         }
-        if(isValid && value.length < 3) {
+        if(isValid && validationRules.minLength && value.length < validationRules.minLength) {
             isValid = false;
-            message = `Min length should be 3 `
+            message = `Min length should be ${validationRules.minLength}`
+        }
+
+        if(isValid && validationRules.pattern && validationRules.pattern.test(value) == false) {
+            isValid = false;
+            message = `Follow the pattern`;
         }
         return {isValid, message}
     }

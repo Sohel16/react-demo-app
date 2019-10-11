@@ -2,8 +2,10 @@ import * as React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import {getPost, fetchMultiple} from '../services/postService';
 import DataTable1 from '../components/tables/dataTable1';
+import Manager from '../components/manager'
 import Pagination from './common/pagination';
 import data from './db2';
+const data2 = require('../db.json');
 
 
 
@@ -20,20 +22,14 @@ class Posts extends React.Component<any, any> {
             postPerPage: 5,
             search: "",
             showTable1: false,
-            otherData: [ 
-                {
-                name: "sohel", age: 35,
-                detail: [{job:"IT", role: "web"}]
-                },
-                {
-                name: "sohel", age: 35,
-                detail: [{job:"IT", role: "web"}]
-                },
-                ]
+            mgrData: null
         }
     }
 
     componentDidMount() {
+        this.setState({
+            mgrData: data2.invMgrDetailsResponse.data
+        })
         this.getAllPost(); 
     }
 
@@ -93,7 +89,8 @@ class Posts extends React.Component<any, any> {
 
     render() {
 
-const {posts, currentPage, postPerPage, errorData} = this.state;
+const {posts, currentPage, postPerPage, errorData, mgrData} = this.state;
+
 
 console.log("error data One time", errorData)
 
@@ -101,9 +98,6 @@ const filteredPosts = posts.filter(p => {
     return p.title.indexOf(this.state.search) != -1;
 })
     
-
-const otherData = this.state.otherData.map((d, i) => d.name)
-console.log(otherData, 'otherdata')
 // GETTING CURRENT POSTS
 
     const indexOfLastPost = currentPage * postPerPage; // ie 1*5 = 5
@@ -152,16 +146,14 @@ console.log(otherData, 'otherdata')
                         </tbody>
                         
                     </table>
-                   
-{/*                
-               <div style={{marginTop: "40px"}}>
-                 { this.state.showTable1 && <button onClick={() => this.props.history.push("/dataTable")}>Data Table</button> } 
-               </div> */}
+
                <hr/>
                 <div className="error-table-wraper">
                 <DataTable1 errorData = {errorData}/>
                 </div>
 
+            <Manager data={mgrData}/>
+                    
                 </div>
                
                  <Pagination 

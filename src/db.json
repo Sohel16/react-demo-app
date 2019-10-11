@@ -1,0 +1,85 @@
+{
+    "invMgrDetailsResponse": {
+      "statCd": "null",
+      "statDesc": "Success",
+      "data": {
+        "investmentManagerFirmCode": "WILSHIRE",
+        "investmentManagerFirmName": "Wilshire Associates Incorporated",
+        "addressLine1": "1299 OCEAN AVENUE, Suite 700",
+        "addressLine2": null,
+        "addressLine3": null,
+        "city": "SANTA MONICA",
+        "state": "CA",
+        "zipCode": "90401",
+        "country": "USA",
+        "phoneNumber": "222-999-5632",
+        "phoneExtension": null,
+        "faxNumber": null,
+        "largeTraderID": null,
+        "confirmRelatedInterestedPartyNameLine1": null,
+        "confirmRelatedInterestedPartyNameLine2": null,
+        "confirmAddressLine1": "1299 OCEAN AVENUE",
+        "confirmAddressLine2": "SUITE 700",
+        "confirmAddressLine3": null,
+        "confirmCity": "SANTA MONICA",
+        "confirmState": "CA",
+        "confirmZipCode": "90401",
+        "confirmCountry": "USA",
+        "confirmElectronicDeliveryPreferenceIndicator": "Y",
+        "managerDTCCNumber": 770088,
+        "proxyRelatedInterestedPartyNameLine1": "ISS/9432/Wilshire Associates Incorporated",
+        "proxyRelatedInterestedPartyNameLine2": null,
+        "proxyAddressLine1": "703 KING FARM BLVD, STE 400",
+        "proxyAddressLine2": null,
+        "proxyAddressLine3": null,
+        "proxyCity": "ROCKVILLE",
+        "proxyState": "MD",
+        "proxyZipCode": "20850",
+        "proxyCountry": "USA",
+        "proxyElectronicDeliveryPreferenceIndicator": "Y",
+        "invMgrProxyElectronicAgentID": null,
+        "adventEnabledManagerInd": "N",
+        "invMgrContactsInfoBeanList": [
+          {
+            "invMgrFirmCode": "WILSHIRE",
+            "sequenceNumber": "INV_MGR_FRM_CNTC_SEQ_NBR",
+            "contactPersonEmailID": "lemkin1@wilshire.com",
+            "contactPersonRoleinInvestmentManagerFirm": "Operations",
+            "contactPersonFirstName": "Leah ",
+            "contactPersonMiddleName": null,
+            "contactPersonLastName": "Emkin",
+            "contactPersonPhoneNumber": null,
+            "contactPersonPhoneExtension": null,
+            "contactPersonFaxNumber": null,
+            "contactDisclosureDelivery": "Y",
+            "createdTimeStamp": "2019-07-31",
+            "createdPgm": "CRTE_PGM",
+            "lastUpdatedPgm": "LAST_UPDT_PGM",
+            "lastUpdatedTimeStamp": "2019-07-31"
+          },
+          {
+            "invMgrFirmCode": "WILSHIRE",
+            "sequenceNumber": "INV_MGR_FRM_CNTC_SEQ_NBR",
+            "contactPersonEmailID": "rrangi@wishire.com",
+            "contactPersonRoleinInvestmentManagerFirm": "Emkin",
+            "contactPersonFirstName": "Rajkamal",
+            "contactPersonMiddleName": null,
+            "contactPersonLastName": "Rangi",
+            "contactPersonPhoneNumber": null,
+            "contactPersonPhoneExtension": null,
+            "contactPersonFaxNumber": null,
+            "contactDisclosureDelivery": "N",
+            "createdTimeStamp": null,
+            "createdPgm": "CRTE_PGM",
+            "lastUpdatedPgm": "LAST_UPDT_PGM",
+            "lastUpdatedTimeStamp": null
+          }
+        ]
+      },
+      "explanations": {
+        "faultDesc": [
+          null
+        ]
+      }
+    }
+  }
