@@ -15,7 +15,7 @@ export default class Manager extends React.Component<any, any> {
             <h4>manager data</h4>
             <ul>
                 {newData && newData.map(el=>{
-                            return <li>{el}</li>
+                    return <li>{el}</li>
                 })}
             </ul>
             </div>

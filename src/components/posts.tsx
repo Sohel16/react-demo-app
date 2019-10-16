@@ -73,7 +73,7 @@ class Posts extends React.Component<any, any> {
 
     handleDelete = (post) => {
         const { posts } = this.state;
-        const newPosts = posts.filter(p => p.id != post.id);
+        const newPosts = posts.filter(p => p.id !== post.id);
         this.setState({
             posts:newPosts,
         });
@@ -95,7 +95,7 @@ const {posts, currentPage, postPerPage, errorData, mgrData} = this.state;
 console.log("error data One time", errorData)
 
 const filteredPosts = posts.filter(p => {
-    return p.title.indexOf(this.state.search) != -1;
+    return p.title.indexOf(this.state.search) !== -1;
 })
     
 // GETTING CURRENT POSTS

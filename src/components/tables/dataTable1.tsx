@@ -17,7 +17,7 @@ export default class DataTable1 extends React.Component<any, any> {
 
     handleSort = (column:string)=>{
         const { data, sort } = this.state;
-        const sortOrder = (sort.column == column) ? (sort.order * -1) : 1;
+        const sortOrder = (sort.column === column) ? (sort.order * -1) : 1;
         const sortedData = data.sort(this.dynamicSort(column, sortOrder))
         this.setState({data: sortedData, sort: {column, order:sortOrder }})
         console.log(sortedData,"Sorted data")
