@@ -4,16 +4,7 @@
     background: linear-gradient(#f0eded, #e3ebec)
 }
 
-.section-wraper {
-    height: 800px;
-    width: 85%;
-    margin: 0 auto;
-    border: 0;
-    border-radius: 6px;
-    background-color: #ffffff;
-    display: flex;
-    flex-wrap:nowrap;
-}
+
 /* .body-wraper {
     width: 100%;
 } */
@@ -46,4 +37,13 @@ footer {
 .footer-bottom {
     padding:30px;
     background-color: white;
+}
+
+.Card-title {
+    list-style: none;
+    text-decoration: none;
+}
+
+.Cricket-table .CT-head {
+    cursor: pointer;
 }

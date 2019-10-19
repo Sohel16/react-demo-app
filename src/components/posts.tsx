@@ -162,12 +162,6 @@ const filteredPosts = posts.filter(p => {
                     paginate={this.handlePageChange} 
                     currentPage={currentPage}
                     />
-                 <div className="post-footer">
-                     <h4>Follow on-</h4>
-                     <a href="#">YouTube</a>
-                     <a href="#">Facebook</a>
-                     <a href="#">Instragram</a>
-                 </div>
             </div>
         )
     }
